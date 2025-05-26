@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aroma(Zhi) Fragrances - Perfume Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Aroma(Zhi) Fragrances</h1>
+        <p>Your destination for exquisite fragrances</p>
+        <nav>
+            <ul>
+                <li><a href="#" id="nav-home">Home</a></li>
+                <li><a href="#" id="nav-our-story">Our Story</a></li>
+                <li><a href="#" id="nav-contact-us">Contact Us</a></li>
+                <li><a href="#" id="nav-cart">Cart (<span id="cart-count">0</span>)</a></li> </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home-section" class="active-section">
+            <h2>Our Perfume Collection</h2>
+            <div class="perfume-grid">
+                <div class="perfume-card">
+                    <img src="" alt="One Million Perfume">
+                    <h3>One Million</h3>
+                    <p class="price">ksh 25.00 per ml</p>
+                    <button class="view-details" data-perfume-id="one-million">View Details</button>
+                </div>
+
+                <div class="perfume-card">
+                    <img src="" alt="212 VIP Perfume">
+                    <h3>212 VIP</h3>
+                    <p class="price">Ksh 25.00 per ml</p>
+                    <button class="view-details" data-perfume-id="212-vip">View Details</button>
+                </div>
+
+                <div class="perfume-card">
+                    <img src="" alt="Golden Dust Perfume">
+                    <h3>Golden Dust</h3>
+                    <p class="price">Ksh 25.00 per ml</p>
+                    <button class="view-details" data-perfume-id="golden-dust">View Details</button>
+                </div>
+                <div class="perfume-card">
+                    <img src="" alt="Sugar Baby Perfume">
+                    <h3>Sugar Baby</h3>
+                    <p class="price">Ksh 25.00 per ml</p>
+                    <button class="view-details" data-perfume-id="sugar-baby">View Details</button>
+                </div>
+                <div class="perfume-card">
+                    <img src="" alt="Sweet Passion Perfume">
+                    <h3>Sweet Passion</h3>
+                    <p class="price">Ksh 25.00 per ml</p>
+                    <button class="view-details" data-perfume-id="sweet-passion">View Details</button>
+                </div>
+                <div class="perfume-card">
+                    <img src="" alt="Sweet Camilla Perfume">
+                    <h3>Sweet Camilla</h3>
+                    <p class="price">Ksh 25.00 per ml</p>
+                    <button class="view-details" data-perfume-id="sweet-camilla">View Details</button>
+                </div>
+                <div class="perfume-card">
+                    <img src="" alt="Pearl Perfume">
+                    <h3>Pearl</h3>
+                    <p class="price">Ksh 25.00 per ml</p>
+                    <button class="view-details" data-perfume-id="pearl">View Details</button>
+                </div>
+                <div class="perfume-card">
+                    <img src="" alt="Polo Sport Perfume">
+                    <h3>Polo Sport</h3>
+                    <p class="price">Ksh 25.00 per ml</p>
+                    <button class="view-details" data-perfume-id="polo-sport">View Details</button>
+                </div>
+                <div class="perfume-card">
+                    <img src="" alt="Polo Blue Perfume">
+                    <h3>Polo Blue</h3>
+                    <p class="price">Ksh 25.00 per ml</p>
+                    <button class="view-details" data-perfume-id="polo-blue">View Details</button>
+                </div>
+                <div class="perfume-card">
+                    <img src="" alt="Pink Chiffon Perfume">
+                    <h3>Pink Chiffon</h3>
+                    <p class="price">Ksh 25.00 per ml</p>
+                    <button class="view-details" data-perfume-id="pink-chiffon">View Details</button>
+                </div>
+                <div class="perfume-card">
+                    <img src="" alt="Baccarat Rouge 540 Perfume">
+                    <h3>Baccarat Rouge 540</h3>
+                    <p class="price">Ksh 25.00 per ml</p>
+                    <button class="view-details" data-perfume-id="baccarat-rouge">View Details</button>
+                </div>
+                <div class="perfume-card">
+                    <img src="" alt="Pure Seduction Perfume">
+                    <h3>Pure Seduction</h3>
+                    <p class="price">Ksh 25.00 per ml</p>
+                    <button class="view-details" data-perfume-id="pure-seduction">View Details</button>
+                </div>
+                <div class="perfume-card">
+                    <img src="" alt="1 Man Show Perfume">
+                    <h3>1 Man Show</h3>
+                    <p class="price">Ksh 25.00 per ml</p>
+                    <button class="view-details" data-perfume-id="1man-show">View Details</button>
+                </div>
+                <div class="perfume-card">
+                    <img src="" alt="Versace Eros Perfume">
+                    <h3>Versace Eros</h3>
+                    <p class="price">Ksh 25.00 per ml</p>
+                    <button class="view-details" data-perfume-id="versace-eros">View Details</button>
+                </div>
+                <div class="perfume-card">
+                    <img src="" alt="Pineapple Perfume">
+                    <h3>Pineapple</h3>
+                    <p class="price">Ksh 25.00 per ml</p>
+                    <button class="view-details" data-perfume-id="pine-apple">View Details</button>
+                </div>
+                <div class="perfume-card">
+                    <img src="" alt="Mango Perfume">
+                    <h3>Mango</h3>
+                    <p class="price">Ksh 25.00 per ml</p>
+                    <button class="view-details" data-perfume-id="mango">View Details</button>
+                </div>
+
+                </div>
+        </section>
+
+        <section id="product-details" class="hidden-section">
+            <h2>Product Details</h2>
+            <div class="details-content">
+                <img id="detail-image" src="" alt="Selected Perfume">
+                <h3 id="detail-name"></h3>
+                <p id="detail-price"></p>
+                <p id="detail-description"></p>
+                <button id="add-to-cart-btn" data-perfume-id="">Add to Cart</button>
+                <button id="back-to-listings">Back to Collection</button>
+            </div>
+        </section>
+
+        <section id="our-story-section" class="hidden-section">
+            <h2>Our Story</h2>
+            <div class="story-content">
+                <p>Welcome to Aroma(Zhi) Fragrances, where passion meets fragrance. Our journey began with a simple belief: that a beautiful scent can transcend moments and evoke memories. We meticulously source the finest ingredients from around the world to craft unique and captivating perfumes that tell a story.</p>
+                <p>Founded in 2025 by Denis Ngunjiri, Aroma(Zhi) Fragrances was born out of a love for the art of perfumery. We believe in quality, sustainability, and creating fragrances that resonate with your individual spirit.</p>
+                <p>Every bottle from Aroma(Zhi) Fragrances is more than just a perfume; it's an experience, a whisper of luxury, and a testament to our dedication to olfactory excellence.</p>
+                <img src="my image.jpg" alt="Our Story Image" class="story-image">
+            </div>
+        </section>
+
+        <section id="contact-us-section" class="hidden-section">
+            <h2>Contact Us</h2>
+            <div class="contact-content">
+                <p>We'd love to hear from you! Whether you have a question about our perfumes, an inquiry about an order, or just want to share your fragrance journey, feel free to reach out.</p>
+                <p><strong>Email:</strong> <a href="mailto:denisngunjiri73@gmail.com.com">denisngunjiri73@gmal.com</a></p>
+                <p><strong>Phone:</strong> <a href="tel:+254 715291248">+254 715291248</a></p>
+                <p><strong>Address:</strong>Kitale, Trans-Nzoia & Lodwar, Turkana: Kenya</p>
+
+                <h3>Send us a message:</h3>
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit">Send Message</button>
+                </form>
+                <p class="form-submission-message" style="display: none; color: green; margin-top: 15px;">Thank you for your message! We will get back to you shortly.</p>
+            </div>
+        </section>
+
+        <section id="cart-section" class="hidden-section">
+            <h2>Your Shopping Cart</h2>
+            <div class="cart-content">
+                <p id="cart-empty-message" style="display: block; text-align: center;">Your cart is empty.</p>
+                <ul id="cart-items">
+                    </ul>
+                <div class="cart-summary">
+                    <p>Total: <span id="cart-total">ksh0.00</span></p>
+                    <button id="checkout-button">Proceed to Order</button>
+                    <p style="margin-top: 10px; font-size: 0.9em; color: #888;">
+                        *Clicking "Proceed to Order" will open your email client to send the order to us.
+                        Or you can just select the perfumes you are interested in and send manually to the
+                        contacts provided both email and whatsapp or text message. 
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Aroma(Zhi) Fragrances. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
