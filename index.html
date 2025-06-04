@@ -4,7 +4,415 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aroma(Zhi) Fragrances - Perfume Store</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Basic Reset & Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header Styling */
+header {
+    background-color: #a76a8d; /* A nice perfume-like color */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header p {
+    margin: 5px 0 15px; /* Added margin for nav below */
+    font-size: 1.1em;
+}
+
+/* Navigation Styling */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Make navigation items horizontal */
+    justify-content: center;
+    background-color: #8c5a76; /* Slightly darker background for nav */
+    padding: 10px 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #714a60; /* Darker on hover */
+}
+
+/* Main Content Area */
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Headings */
+h2 {
+    text-align: center;
+    color: #a76a8d;
+    margin-bottom: 30px;
+}
+
+/* Perfume Grid Styling */
+.perfume-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 30px;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+/* Individual Perfume Card Styling */
+.perfume-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.perfume-card:hover {
+    transform: translateY(-5px); /* Subtle lift on hover */
+}
+
+.perfume-card img {
+    max-width: 100%;
+    height: 200px; /* Fixed height for consistency */
+    object-fit: cover; /* Ensures images fill the space nicely */
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.perfume-card h3 {
+    font-size: 1.4em;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.perfume-card .price {
+    font-size: 1.2em;
+    color: #a76a8d;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Button Styling */
+button {
+    background-color: #a76a8d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #8c5a76; /* Slightly darker on hover */
+}
+
+/* Product Details Section Styling */
+#product-details {
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 600px; /* Constrain width for details */
+    margin: 40px auto;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+#product-details .details-content img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+#product-details .details-content h3 {
+    font-size: 2em;
+    color: #a76a8d;
+    margin-bottom: 10px;
+}
+
+#product-details .details-content p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+#product-details .details-content #detail-price {
+    font-size: 1.5em;
+    color: #a76a8d;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#product-details .details-content button {
+    margin: 10px;
+}
+
+
+/* Styling for hidden sections */
+.hidden-section {
+    display: none; /* By default, hide sections with this class */
+}
+
+.active-section {
+    display: block; /* Show sections with this class */
+}
+
+/* Our Story Section Styling */
+#our-story-section, #contact-us-section, #cart-section { /* Added #cart-section */
+    padding: 30px;
+    text-align: center;
+}
+
+#our-story-section .story-content {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+    font-size: 1.1em;
+    text-align: left; /* Align text left within the content div */
+}
+
+#our-story-section .story-image {
+    max-width: 100%;
+    height: 50%;
+    border-radius: 8px;
+    margin-top: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Us Section Styling */
+#contact-us-section .contact-content {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left; /* Align text left within the content div */
+}
+
+#contact-us-section .contact-content p,
+#contact-us-section .contact-content a {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+#contact-us-section .contact-content a {
+    color: #a76a8d;
+    text-decoration: none;
+}
+
+#contact-us-section .contact-content a:hover {
+    text-decoration: underline;
+}
+
+#contact-us-section h3 {
+    color: #a76a8d;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    text-align: center; /* Center heading for form */
+}
+
+/* Form Styling */
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between form groups */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    width: 100%; /* Make input fill the space */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.form-group textarea {
+    resize: vertical; /* Allow vertical resizing */
+}
+
+#contact-form button[type="submit"] {
+    align-self: center; /* Center the submit button */
+    margin-top: 20px;
+    width: auto; /* Adjust width based on content */
+}
+
+/* Form submission message */
+.form-submission-message {
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Shopping Cart Section Styling */
+#cart-section .cart-content {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    text-align: left;
+}
+
+#cart-items {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+#cart-items li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+#cart-items li:last-child {
+    border-bottom: none;
+}
+
+#cart-items li span {
+    flex: 1; /* Allow text to take up space */
+}
+
+#cart-items li .item-name {
+    font-weight: bold;
+    color: #a76a8d;
+}
+
+#cart-items li .item-quantity,
+#cart-items li .item-price {
+    text-align: right;
+    margin-left: 15px;
+    flex-shrink: 0; /* Don't shrink these items */
+}
+
+#cart-items li .remove-item-btn {
+    background-color: #dc3545; /* Red for remove button */
+    padding: 5px 10px;
+    font-size: 0.8em;
+    margin-left: 15px;
+}
+
+#cart-items li .remove-item-btn:hover {
+    background-color: #c82333;
+}
+
+.cart-summary {
+    text-align: right;
+    border-top: 2px solid #a76a8d;
+    padding-top: 15px;
+    margin-top: 20px;
+}
+
+.cart-summary p {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #a76a8d;
+}
+
+.cart-summary #cart-total {
+    font-size: 1.5em;
+    color: #a76a8d;
+}
+
+#checkout-button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    font-size: 1.1em;
+    background-color: #28a745; /* Green for checkout */
+}
+
+#checkout-button:hover {
+    background-color: #218838;
+}
+
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    background-color: #333;
+    color: white;
+    font-size: 0.9em;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .perfume-grid {
+        grid-template-columns: 1fr; /* Stack cards on smaller screens */
+    }
+
+    main {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    #product-details, #our-story-section .story-content, #contact-us-section .contact-content, #cart-section .cart-content {
+        padding: 20px;
+    }
+}
+    </style>
 </head>
 <body>
     <header>
